@@ -5,20 +5,20 @@
 class Posh < Formula
   desc "Project Oriented SHELL"
   homepage "https://github.com/foomo/posh"
-  version "0.4.2"
+  version "0.4.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.4.2/posh_0.4.2_darwin_amd64.tar.gz"
-      sha256 "03edaa9f64df3baccb9c9b2c4b143120029e8e986ce89780dae1c0ca764f3221"
+    if Hardware::CPU.arm?
+      url "https://github.com/foomo/posh/releases/download/v0.4.3/posh_0.4.3_darwin_arm64.tar.gz"
+      sha256 "1c684fe99b5e484ca502032745e9a873e80d5af3635d4ba2f906587ad2b4ac74"
 
       def install
         bin.install "posh"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/foomo/posh/releases/download/v0.4.2/posh_0.4.2_darwin_arm64.tar.gz"
-      sha256 "514be02ca3ad75f540c058f79ad73f0f1d95ef5b5d3dbc5bd14d740906a5600e"
+    if Hardware::CPU.intel?
+      url "https://github.com/foomo/posh/releases/download/v0.4.3/posh_0.4.3_darwin_amd64.tar.gz"
+      sha256 "0880babcb699c4eb6d1fedf182c4b35b8d6018460859529c47c29981ad3b9347"
 
       def install
         bin.install "posh"
@@ -27,17 +27,17 @@ class Posh < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/posh/releases/download/v0.4.2/posh_0.4.2_linux_arm64.tar.gz"
-      sha256 "d2cd853566ce561458b9b739d69b87c460e79dc617e3532c20edb7ef9d0ce4aa"
+    if Hardware::CPU.intel?
+      url "https://github.com/foomo/posh/releases/download/v0.4.3/posh_0.4.3_linux_amd64.tar.gz"
+      sha256 "6f17ccc2da835f3cd26213543861f0b2aa2d97afa99b7cada927029a30903b0a"
 
       def install
         bin.install "posh"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.4.2/posh_0.4.2_linux_amd64.tar.gz"
-      sha256 "9bf226a97d035994e36ca88a44f5b79e05590d59106a879ac85917e67f38d304"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/posh/releases/download/v0.4.3/posh_0.4.3_linux_arm64.tar.gz"
+      sha256 "5f2dd050c5ff022801e4740a8ba8be8d5479fb9f72f648d7f463406bce83b127"
 
       def install
         bin.install "posh"
