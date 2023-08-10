@@ -5,20 +5,20 @@
 class Posh < Formula
   desc "Project Oriented SHELL"
   homepage "https://github.com/foomo/posh"
-  version "0.4.3"
+  version "0.4.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/posh/releases/download/v0.4.3/posh_0.4.3_darwin_arm64.tar.gz"
-      sha256 "1c684fe99b5e484ca502032745e9a873e80d5af3635d4ba2f906587ad2b4ac74"
+      url "https://github.com/foomo/posh/releases/download/v0.4.4/posh_0.4.4_darwin_arm64.tar.gz"
+      sha256 "3e581e9a46959b6d4f4e78790602fbf3297832e778658d52cc2145ae5888e0df"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.4.3/posh_0.4.3_darwin_amd64.tar.gz"
-      sha256 "0880babcb699c4eb6d1fedf182c4b35b8d6018460859529c47c29981ad3b9347"
+      url "https://github.com/foomo/posh/releases/download/v0.4.4/posh_0.4.4_darwin_amd64.tar.gz"
+      sha256 "105342b34f87a42c312039239a7e6d7bd43ba355b7a00f65ee1d73b3336ca859"
 
       def install
         bin.install "posh"
@@ -27,17 +27,17 @@ class Posh < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.4.3/posh_0.4.3_linux_amd64.tar.gz"
-      sha256 "6f17ccc2da835f3cd26213543861f0b2aa2d97afa99b7cada927029a30903b0a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/posh/releases/download/v0.4.4/posh_0.4.4_linux_arm64.tar.gz"
+      sha256 "687bb0dc2053dfc7b4886c1ef9da2c8ed11056f31f6d9048a4dbda3ac73cd318"
 
       def install
         bin.install "posh"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/posh/releases/download/v0.4.3/posh_0.4.3_linux_arm64.tar.gz"
-      sha256 "5f2dd050c5ff022801e4740a8ba8be8d5479fb9f72f648d7f463406bce83b127"
+    if Hardware::CPU.intel?
+      url "https://github.com/foomo/posh/releases/download/v0.4.4/posh_0.4.4_linux_amd64.tar.gz"
+      sha256 "0d04a336d87129737cd91ded9e8e92aa90f55bc26a59c9992df109db4c23bfab"
 
       def install
         bin.install "posh"
