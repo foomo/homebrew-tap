@@ -5,20 +5,20 @@
 class Posh < Formula
   desc "Project Oriented SHELL"
   homepage "https://github.com/foomo/posh"
-  version "0.5.2"
+  version "0.5.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/posh/releases/download/v0.5.2/posh_0.5.2_darwin_arm64.tar.gz"
-      sha256 "94a872b705a9709407722a19bd07d12cd78c0fc9506595ca182935707538d82b"
+      url "https://github.com/foomo/posh/releases/download/v0.5.3/posh_0.5.3_darwin_arm64.tar.gz"
+      sha256 "112080e9b8557edce07e9e7c53e85eb2ef548332c0922cc13d2e378c82097613"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.5.2/posh_0.5.2_darwin_amd64.tar.gz"
-      sha256 "40bac85fd8b4c9bcafc5fc8c56880e59e481aaac3b14d1a740ff982804f55f24"
+      url "https://github.com/foomo/posh/releases/download/v0.5.3/posh_0.5.3_darwin_amd64.tar.gz"
+      sha256 "b75a2fc8504aea7fa0049fdc41297d62c990849d95fd04056f2dbcdc77d1e307"
 
       def install
         bin.install "posh"
@@ -28,16 +28,16 @@ class Posh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/posh/releases/download/v0.5.2/posh_0.5.2_linux_arm64.tar.gz"
-      sha256 "6b9c4fe823263e05ebc3fd0720a5127230100a60a8e03d5a1f7ccf3c7c92db56"
+      url "https://github.com/foomo/posh/releases/download/v0.5.3/posh_0.5.3_linux_arm64.tar.gz"
+      sha256 "e3172cc0245c8c2352004734a4586752d8616d87bbf65a1b242efb744b9a9574"
 
       def install
         bin.install "posh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.5.2/posh_0.5.2_linux_amd64.tar.gz"
-      sha256 "e409bff4c8dc9291b125dbe539d2897d6e8d9d6a2132529ba3f6ec8d9f6fcafb"
+      url "https://github.com/foomo/posh/releases/download/v0.5.3/posh_0.5.3_linux_amd64.tar.gz"
+      sha256 "dc9375c15cc637b845c94e77ea45b79bd2e8fd64027a84d39304e2f652064f67"
 
       def install
         bin.install "posh"
