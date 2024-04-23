@@ -5,20 +5,20 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "2.0.0-rc.15"
+  version "2.0.0-rc.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v2.0.0-rc.15/squadron_2.0.0-rc.15_darwin_amd64.tar.gz"
-      sha256 "a628716c1a8bfed8cdba6cd6825d6b44a2b450c5a3a116055a925386b8f0a204"
+      url "https://github.com/foomo/squadron/releases/download/v2.0.0-rc.16/squadron_2.0.0-rc.16_darwin_amd64.tar.gz"
+      sha256 "6846ef408afca0e42c01902f2f5a681e70469af3991b8f7d59911297e6d6417d"
 
       def install
         bin.install "squadron"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/squadron/releases/download/v2.0.0-rc.15/squadron_2.0.0-rc.15_darwin_arm64.tar.gz"
-      sha256 "2e2a97a75cb30f9b4124f49e76f1ba70cc8d0245b22db8355f4f3e15413b262a"
+      url "https://github.com/foomo/squadron/releases/download/v2.0.0-rc.16/squadron_2.0.0-rc.16_darwin_arm64.tar.gz"
+      sha256 "a88c299511bbba674c07061c7ac75c66ddceb6040079736f225f5c18e909a517"
 
       def install
         bin.install "squadron"
@@ -27,17 +27,17 @@ class Squadron < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/squadron/releases/download/v2.0.0-rc.15/squadron_2.0.0-rc.15_linux_arm64.tar.gz"
-      sha256 "9ab62ee966749c2757c888be6d0d8d5968931db4fa8e49a93a4f64c9d80b9556"
+    if Hardware::CPU.intel?
+      url "https://github.com/foomo/squadron/releases/download/v2.0.0-rc.16/squadron_2.0.0-rc.16_linux_amd64.tar.gz"
+      sha256 "d8b239cd931ee00cc8fcf5950592b57347c6c367d83070d17dd04ce75097408f"
 
       def install
         bin.install "squadron"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v2.0.0-rc.15/squadron_2.0.0-rc.15_linux_amd64.tar.gz"
-      sha256 "189891f019a6ac764927f51bbd3bf9ff8fb8b892ecdd8c7331b5ab87d386a9f2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/squadron/releases/download/v2.0.0-rc.16/squadron_2.0.0-rc.16_linux_arm64.tar.gz"
+      sha256 "7906db24dfc6b245ec2d01b2f3ef307114a5a4b7b7e92fe4380397ec90c4b622"
 
       def install
         bin.install "squadron"
