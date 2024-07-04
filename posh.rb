@@ -5,20 +5,20 @@
 class Posh < Formula
   desc "Project Oriented SHELL"
   homepage "https://github.com/foomo/posh"
-  version "0.5.8"
+  version "0.5.9"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.5.8/posh_0.5.8_darwin_amd64.tar.gz"
-      sha256 "a1cace5924abc6bd54ce5b0b98175bbba09185d25765b1976e36bcda980a559f"
+    on_intel do
+      url "https://github.com/foomo/posh/releases/download/v0.5.9/posh_0.5.9_darwin_amd64.tar.gz"
+      sha256 "1cfc2c02207e097eedbb4ab07a5d4664fd91a3903aab70411925fd62c98322d0"
 
       def install
         bin.install "posh"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/foomo/posh/releases/download/v0.5.8/posh_0.5.8_darwin_arm64.tar.gz"
-      sha256 "414f03b88d8c140eafa11cdfa0c417555e2e4b73ed250ce1c68401efe6c47746"
+    on_arm do
+      url "https://github.com/foomo/posh/releases/download/v0.5.9/posh_0.5.9_darwin_arm64.tar.gz"
+      sha256 "fdea530074d56b72afd946a344bdda91f6cb0504794ef9cac7954ecff47707e4"
 
       def install
         bin.install "posh"
@@ -27,20 +27,24 @@ class Posh < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.5.8/posh_0.5.8_linux_amd64.tar.gz"
-      sha256 "6a1d65cd4e7bb81e054ca830109d7962481fa66e8fbea12172690d473b9eca56"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/foomo/posh/releases/download/v0.5.9/posh_0.5.9_linux_amd64.tar.gz"
+        sha256 "85575ef72afd572bacbd4ded62673e211959d82555689fca5d98bd521b205b07"
 
-      def install
-        bin.install "posh"
+        def install
+          bin.install "posh"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/posh/releases/download/v0.5.8/posh_0.5.8_linux_arm64.tar.gz"
-      sha256 "324f40ab4da96c2f61fb7460bd2016315582599718a53cbd3041f5b106fdbd76"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/foomo/posh/releases/download/v0.5.9/posh_0.5.9_linux_arm64.tar.gz"
+        sha256 "72dbbea42c3b8993928d212899cc39bdc69ad4027e30de1d005242359f2bbe94"
 
-      def install
-        bin.install "posh"
+        def install
+          bin.install "posh"
+        end
       end
     end
   end
