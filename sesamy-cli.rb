@@ -5,20 +5,20 @@
 class SesamyCli < Formula
   desc "CLI utitlity to manage Server Side Tag Management"
   homepage "https://github.com/foomo/sesamy-cli"
-  version "0.3.1"
+  version "0.3.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/foomo/sesamy-cli/releases/download/v0.3.1/sesamy-cli_0.3.1_darwin_amd64.tar.gz"
-      sha256 "b3e83a4f2cd1a319afc2ab52845be9d71f54ccd05d644057144dc8a10bb18c2f"
+      url "https://github.com/foomo/sesamy-cli/releases/download/v0.3.2/sesamy-cli_0.3.2_darwin_amd64.tar.gz"
+      sha256 "fd2e10c134b1dc9c83699aa5812e5be133e87fb435b8d116ac32d1b921f73121"
 
       def install
         bin.install "sesamy"
       end
     end
     on_arm do
-      url "https://github.com/foomo/sesamy-cli/releases/download/v0.3.1/sesamy-cli_0.3.1_darwin_arm64.tar.gz"
-      sha256 "54330b5b2e083eb79c241fcfe1b3709150d52952c3427c1165bb782f606b441f"
+      url "https://github.com/foomo/sesamy-cli/releases/download/v0.3.2/sesamy-cli_0.3.2_darwin_arm64.tar.gz"
+      sha256 "ed4aad9ab4617551c435bb946ce17148b7fdeb88213764d31c6f7427e1475415"
 
       def install
         bin.install "sesamy"
@@ -29,8 +29,8 @@ class SesamyCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/sesamy-cli/releases/download/v0.3.1/sesamy-cli_0.3.1_linux_amd64.tar.gz"
-        sha256 "962b91fb12ab9f29a9da3b347692509b6182d581a5c101f7598a2dab1c848e67"
+        url "https://github.com/foomo/sesamy-cli/releases/download/v0.3.2/sesamy-cli_0.3.2_linux_amd64.tar.gz"
+        sha256 "a7c5128d0eb7d090e2500e5feeddb6e91ce4b5c9bf7e0756be51044d3fd17358"
 
         def install
           bin.install "sesamy"
@@ -39,8 +39,8 @@ class SesamyCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/sesamy-cli/releases/download/v0.3.1/sesamy-cli_0.3.1_linux_arm64.tar.gz"
-        sha256 "002c657ef6af2931d83458db583fece071417b7aa246366296edf88805409c78"
+        url "https://github.com/foomo/sesamy-cli/releases/download/v0.3.2/sesamy-cli_0.3.2_linux_arm64.tar.gz"
+        sha256 "01ed35b3bd6b914fb0a5981e78043777934c651beaf9d77a09652e25b09aea66"
 
         def install
           bin.install "sesamy"
