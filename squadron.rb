@@ -5,20 +5,20 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "2.1.0"
+  version "2.1.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/foomo/squadron/releases/download/v2.1.0/squadron_2.1.0_darwin_amd64.tar.gz"
-      sha256 "62885633dc04f85004c84999f21e37f4aef00561418d72bb78fe45e51c8deb45"
+      url "https://github.com/foomo/squadron/releases/download/v2.1.1/squadron_2.1.1_darwin_amd64.tar.gz"
+      sha256 "52e8fd8ad3fa1e3bff7e6d35ca35663973faf4e7f97bed4dd43472440ee0c9e2"
 
       def install
         bin.install "squadron"
       end
     end
     on_arm do
-      url "https://github.com/foomo/squadron/releases/download/v2.1.0/squadron_2.1.0_darwin_arm64.tar.gz"
-      sha256 "eb7b4810e1484b78dba6128384c57b6c42df211100f48f50da373b4b9fde87a6"
+      url "https://github.com/foomo/squadron/releases/download/v2.1.1/squadron_2.1.1_darwin_arm64.tar.gz"
+      sha256 "4b09610d76641a0889ef26dcd814e0d7da8fcbdae6cd10b62a67b59a5ed02fe1"
 
       def install
         bin.install "squadron"
@@ -29,8 +29,8 @@ class Squadron < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/squadron/releases/download/v2.1.0/squadron_2.1.0_linux_amd64.tar.gz"
-        sha256 "841f5ae314d3aa948fe77a6edc07172c6e14d6fefd90ae98fa28205468c85ffb"
+        url "https://github.com/foomo/squadron/releases/download/v2.1.1/squadron_2.1.1_linux_amd64.tar.gz"
+        sha256 "69153435f6eba19fb6c520addae26e60082fb9754e4045bbb26833e05b21cb58"
 
         def install
           bin.install "squadron"
@@ -39,8 +39,8 @@ class Squadron < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/squadron/releases/download/v2.1.0/squadron_2.1.0_linux_arm64.tar.gz"
-        sha256 "38ea3c11d43ef9dc8599d9683b1526ab24ffbaae9eb52c6ae34039c32eabeb42"
+        url "https://github.com/foomo/squadron/releases/download/v2.1.1/squadron_2.1.1_linux_arm64.tar.gz"
+        sha256 "f49a566692c792bb7c9ac991537b6dda40d644493d8d4ada152066652ec2f0d0"
 
         def install
           bin.install "squadron"
