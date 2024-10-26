@@ -5,20 +5,20 @@
 class Posh < Formula
   desc "Project Oriented SHELL"
   homepage "https://github.com/foomo/posh"
-  version "0.8.0"
+  version "0.8.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/foomo/posh/releases/download/v0.8.0/posh_0.8.0_darwin_amd64.tar.gz"
-      sha256 "217d77e1933e729f9b65915549a3ae25ab6555c633a84e251cf08b25de29017f"
+      url "https://github.com/foomo/posh/releases/download/v0.8.1/posh_0.8.1_darwin_amd64.tar.gz"
+      sha256 "0ccdc067102136235613df305898e72b8c0b5abfed460491882c5a6a0b7b9908"
 
       def install
         bin.install "posh"
       end
     end
     on_arm do
-      url "https://github.com/foomo/posh/releases/download/v0.8.0/posh_0.8.0_darwin_arm64.tar.gz"
-      sha256 "7ec6a1681c15f6f42177bd6d1993a7189ba8652bd70d5e59cef9ca34717de882"
+      url "https://github.com/foomo/posh/releases/download/v0.8.1/posh_0.8.1_darwin_arm64.tar.gz"
+      sha256 "f455738708a0e3896974b89a02a9ca652f408bbea0bb3354c2468027c096bdff"
 
       def install
         bin.install "posh"
@@ -29,8 +29,8 @@ class Posh < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/posh/releases/download/v0.8.0/posh_0.8.0_linux_amd64.tar.gz"
-        sha256 "682200d54e6a93f13f1166d65b99bac7ad77c30b855193a87ebc116bceec5eb4"
+        url "https://github.com/foomo/posh/releases/download/v0.8.1/posh_0.8.1_linux_amd64.tar.gz"
+        sha256 "e42067832a8564852f6d978fcabdfed915bf5f109164b92c9545b15914048ff1"
 
         def install
           bin.install "posh"
@@ -39,8 +39,8 @@ class Posh < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/posh/releases/download/v0.8.0/posh_0.8.0_linux_arm64.tar.gz"
-        sha256 "d992ff3c8e8abc9c88859fad64477d614fb922ce56a80888900b640375faea99"
+        url "https://github.com/foomo/posh/releases/download/v0.8.1/posh_0.8.1_linux_arm64.tar.gz"
+        sha256 "83a9858158ba03117f607cd01389f3825509548b34a15fdd71c713367e1216a2"
 
         def install
           bin.install "posh"
