@@ -5,20 +5,20 @@
 class Ownbrew < Formula
   desc "Your local project package manager"
   homepage "https://github.com/foomo/ownbrew"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/foomo/ownbrew/releases/download/v0.2.0/ownbrew_0.2.0_darwin_amd64.tar.gz"
-      sha256 "7e7e661f82caa368339c3fbc78d8ab5434637ad06da0a4ea878f6541320e1c90"
+      url "https://github.com/foomo/ownbrew/releases/download/v0.2.1/ownbrew_0.2.1_darwin_amd64.tar.gz"
+      sha256 "83af92a2301f56dd34c9589a0a4984bb1f9388b15c54bba64c99c76abb2a0c43"
 
       def install
         bin.install "ownbrew"
       end
     end
     on_arm do
-      url "https://github.com/foomo/ownbrew/releases/download/v0.2.0/ownbrew_0.2.0_darwin_arm64.tar.gz"
-      sha256 "1f5cedd4d186f3fe5524336b7d217844aa07319d3ae788951895e2a739927301"
+      url "https://github.com/foomo/ownbrew/releases/download/v0.2.1/ownbrew_0.2.1_darwin_arm64.tar.gz"
+      sha256 "468c5791f272e05a9d040db283e7b857e4cb3d9f7b52da080d3a39bd26bd7484"
 
       def install
         bin.install "ownbrew"
@@ -29,8 +29,8 @@ class Ownbrew < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/ownbrew/releases/download/v0.2.0/ownbrew_0.2.0_linux_amd64.tar.gz"
-        sha256 "84bd2a161e88c65dda72a2f72a19ba94aff567bd3311b08b6df4fe46d67d61b4"
+        url "https://github.com/foomo/ownbrew/releases/download/v0.2.1/ownbrew_0.2.1_linux_amd64.tar.gz"
+        sha256 "851369cfad2d4e1d408ecd4d88f373f6e40fc9910531b20e1957b9b852c8dd36"
 
         def install
           bin.install "ownbrew"
@@ -39,8 +39,8 @@ class Ownbrew < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/ownbrew/releases/download/v0.2.0/ownbrew_0.2.0_linux_arm64.tar.gz"
-        sha256 "d4b2de5b1ddbec5ecac7e2f5cfe1e350e0684cd42d9ac59551b4922ca0b23dc0"
+        url "https://github.com/foomo/ownbrew/releases/download/v0.2.1/ownbrew_0.2.1_linux_arm64.tar.gz"
+        sha256 "5d648b13cd664d3e41c9e919818305f503ce987bf971f3b2939e85d915249d1e"
 
         def install
           bin.install "ownbrew"
