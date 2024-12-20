@@ -5,20 +5,20 @@
 class Ownbrew < Formula
   desc "Your local project package manager"
   homepage "https://github.com/foomo/ownbrew"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/ownbrew/releases/download/v0.2.2/ownbrew_0.2.2_darwin_amd64.tar.gz"
-      sha256 "9eacf89873e29b5dbf1487d978bb2426cbae8f908e0518ac6b9ef9cf04adb3f5"
+      url "https://github.com/foomo/ownbrew/releases/download/v0.2.3/ownbrew_0.2.3_darwin_amd64.tar.gz"
+      sha256 "7af8d0edcaaa23eddc3add5b0f2a8cc3b0c0768aede38a4ead2b1611fe9bb91b"
 
       def install
         bin.install "ownbrew"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/ownbrew/releases/download/v0.2.2/ownbrew_0.2.2_darwin_arm64.tar.gz"
-      sha256 "9797ea24d122c25d64de947eb0ea36dc22542ba4f51505351104066c6560cf2d"
+      url "https://github.com/foomo/ownbrew/releases/download/v0.2.3/ownbrew_0.2.3_darwin_arm64.tar.gz"
+      sha256 "2172072e5c073365c95c57a9fd57f035f8d7df3dc52dd9c18573517096a81be3"
 
       def install
         bin.install "ownbrew"
@@ -29,8 +29,8 @@ class Ownbrew < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/ownbrew/releases/download/v0.2.2/ownbrew_0.2.2_linux_amd64.tar.gz"
-        sha256 "21adbd92d9fd89d493139646c25f83e4e02e7c84f9b00a9fc58136ea0cf65cb6"
+        url "https://github.com/foomo/ownbrew/releases/download/v0.2.3/ownbrew_0.2.3_linux_amd64.tar.gz"
+        sha256 "717703357e25f8b3add6e484649defdea9f8cb3f5b49ee4690c4d35b30b755e4"
 
         def install
           bin.install "ownbrew"
@@ -39,8 +39,8 @@ class Ownbrew < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/ownbrew/releases/download/v0.2.2/ownbrew_0.2.2_linux_arm64.tar.gz"
-        sha256 "71394d9964424e0e70b6c66a72375137b146e66328a2c708717ea8a29dc827d1"
+        url "https://github.com/foomo/ownbrew/releases/download/v0.2.3/ownbrew_0.2.3_linux_arm64.tar.gz"
+        sha256 "c84681cf592705934cbbf21b8ff179effc8f7c23722e20bace648e79f8e5ef9d"
 
         def install
           bin.install "ownbrew"
