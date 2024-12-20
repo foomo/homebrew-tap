@@ -5,20 +5,20 @@
 class Ownbrew < Formula
   desc "Your local project package manager"
   homepage "https://github.com/foomo/ownbrew"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
-    on_intel do
-      url "https://github.com/foomo/ownbrew/releases/download/v0.2.1/ownbrew_0.2.1_darwin_amd64.tar.gz"
-      sha256 "83af92a2301f56dd34c9589a0a4984bb1f9388b15c54bba64c99c76abb2a0c43"
+    if Hardware::CPU.intel?
+      url "https://github.com/foomo/ownbrew/releases/download/v0.2.2/ownbrew_0.2.2_darwin_amd64.tar.gz"
+      sha256 "9eacf89873e29b5dbf1487d978bb2426cbae8f908e0518ac6b9ef9cf04adb3f5"
 
       def install
         bin.install "ownbrew"
       end
     end
-    on_arm do
-      url "https://github.com/foomo/ownbrew/releases/download/v0.2.1/ownbrew_0.2.1_darwin_arm64.tar.gz"
-      sha256 "468c5791f272e05a9d040db283e7b857e4cb3d9f7b52da080d3a39bd26bd7484"
+    if Hardware::CPU.arm?
+      url "https://github.com/foomo/ownbrew/releases/download/v0.2.2/ownbrew_0.2.2_darwin_arm64.tar.gz"
+      sha256 "9797ea24d122c25d64de947eb0ea36dc22542ba4f51505351104066c6560cf2d"
 
       def install
         bin.install "ownbrew"
@@ -27,20 +27,20 @@ class Ownbrew < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/ownbrew/releases/download/v0.2.1/ownbrew_0.2.1_linux_amd64.tar.gz"
-        sha256 "851369cfad2d4e1d408ecd4d88f373f6e40fc9910531b20e1957b9b852c8dd36"
+        url "https://github.com/foomo/ownbrew/releases/download/v0.2.2/ownbrew_0.2.2_linux_amd64.tar.gz"
+        sha256 "21adbd92d9fd89d493139646c25f83e4e02e7c84f9b00a9fc58136ea0cf65cb6"
 
         def install
           bin.install "ownbrew"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/ownbrew/releases/download/v0.2.1/ownbrew_0.2.1_linux_arm64.tar.gz"
-        sha256 "5d648b13cd664d3e41c9e919818305f503ce987bf971f3b2939e85d915249d1e"
+        url "https://github.com/foomo/ownbrew/releases/download/v0.2.2/ownbrew_0.2.2_linux_arm64.tar.gz"
+        sha256 "71394d9964424e0e70b6c66a72375137b146e66328a2c708717ea8a29dc827d1"
 
         def install
           bin.install "ownbrew"
