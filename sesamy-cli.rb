@@ -5,20 +5,20 @@
 class SesamyCli < Formula
   desc "CLI utitlity to manage Server Side Tag Management"
   homepage "https://github.com/foomo/sesamy-cli"
-  version "0.14.0"
+  version "0.14.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/sesamy-cli/releases/download/v0.14.0/sesamy-cli_0.14.0_darwin_amd64.tar.gz"
-      sha256 "e10796f2a7cbb484889a14723ea1afd4fd016e09f8fe0a84a35d7b5fe6314dce"
+      url "https://github.com/foomo/sesamy-cli/releases/download/v0.14.1/sesamy-cli_0.14.1_darwin_amd64.tar.gz"
+      sha256 "2a727214fc0a2e86c43cc93fd48020458e93a0962a6f593fbf5d4428c5e36083"
 
       def install
         bin.install "sesamy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/sesamy-cli/releases/download/v0.14.0/sesamy-cli_0.14.0_darwin_arm64.tar.gz"
-      sha256 "de33bc1dfc5e839e4c2e420a46777e074f0cffc1005fd4a4ee3391b1b683baf2"
+      url "https://github.com/foomo/sesamy-cli/releases/download/v0.14.1/sesamy-cli_0.14.1_darwin_arm64.tar.gz"
+      sha256 "948b1728f8d1c09426f75415b981fbf2acdd8372a9c03c3a589517a9d144fee3"
 
       def install
         bin.install "sesamy"
@@ -29,8 +29,8 @@ class SesamyCli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/sesamy-cli/releases/download/v0.14.0/sesamy-cli_0.14.0_linux_amd64.tar.gz"
-        sha256 "99fc6527ddab279cd84c27b1fd51703d51a965c64e173a52058d49f330dc886b"
+        url "https://github.com/foomo/sesamy-cli/releases/download/v0.14.1/sesamy-cli_0.14.1_linux_amd64.tar.gz"
+        sha256 "039d15fb09b2adef82acbadce805db15c0d9fb924b6573916db357b6d50de2c4"
 
         def install
           bin.install "sesamy"
@@ -39,8 +39,8 @@ class SesamyCli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/sesamy-cli/releases/download/v0.14.0/sesamy-cli_0.14.0_linux_arm64.tar.gz"
-        sha256 "47635fd6f131121c9031f5aaaadead8f91cde35b3525a8e0463d91752e9a10ed"
+        url "https://github.com/foomo/sesamy-cli/releases/download/v0.14.1/sesamy-cli_0.14.1_linux_arm64.tar.gz"
+        sha256 "f96930ac15bf07c26a436223ddc7f7b7543c21725fcf1c731363cd570636e603"
 
         def install
           bin.install "sesamy"
