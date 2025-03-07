@@ -5,20 +5,20 @@
 class Gotsrpc < Formula
   desc "CLI utility to generate go and typescript RPC calls easily"
   homepage "https://github.com/foomo/gotsrpc"
-  version "2.9.1"
+  version "2.9.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.9.1/gotsrpc_2.9.1_darwin_amd64.tar.gz"
-      sha256 "21063c6b91e5b89be28ac629345f74486481a83c5ea9c1e133ef8f7f1934bb52"
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.9.2/gotsrpc_2.9.2_darwin_amd64.tar.gz"
+      sha256 "c69f94e391d35dee05b176ef452f03f8ea97d743d4ac176ad628f8fdb277d085"
 
       def install
         bin.install "gotsrpc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.9.1/gotsrpc_2.9.1_darwin_arm64.tar.gz"
-      sha256 "b6f249fec63a9849ef79fc1e48a68409c1577906e4850abadf82e2de1a1ed40d"
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.9.2/gotsrpc_2.9.2_darwin_arm64.tar.gz"
+      sha256 "3ab9c77268688d53b56b7eafa8581c5f989e5cbc516b2edd347d24f2ccc2ef4c"
 
       def install
         bin.install "gotsrpc"
@@ -29,8 +29,8 @@ class Gotsrpc < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/gotsrpc/releases/download/v2.9.1/gotsrpc_2.9.1_linux_amd64.tar.gz"
-        sha256 "6290c2a46ec0a9e083a5ff5599bdb5eacc52f8424985f8a11483ba6cb87d9568"
+        url "https://github.com/foomo/gotsrpc/releases/download/v2.9.2/gotsrpc_2.9.2_linux_amd64.tar.gz"
+        sha256 "ae6744a8dcb63ed2c40f8f3e2b837321f41689d291c62f283df0096292998ce1"
 
         def install
           bin.install "gotsrpc"
@@ -39,8 +39,8 @@ class Gotsrpc < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/gotsrpc/releases/download/v2.9.1/gotsrpc_2.9.1_linux_arm64.tar.gz"
-        sha256 "61f994b9a59312557a91e1810138e4ee597b1ef102eb22455e6eddc31f2c50bf"
+        url "https://github.com/foomo/gotsrpc/releases/download/v2.9.2/gotsrpc_2.9.2_linux_arm64.tar.gz"
+        sha256 "db72a6c408e91c2fc32e6463bd603408e7540313b74cde9f02e4ed2c809d54ad"
 
         def install
           bin.install "gotsrpc"
