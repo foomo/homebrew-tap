@@ -5,20 +5,20 @@
 class Gokazi < Formula
   desc "Simple daemonmless process manager"
   homepage "https://github.com/foomo/gokazi"
-  version "0.1.4"
+  version "0.1.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gokazi/releases/download/v0.1.4/gokazi_0.1.4_darwin_amd64.tar.gz"
-      sha256 "086d720d4648be67b43b7c91359706cf9fab63df5e072ec6b20734460ba45247"
+      url "https://github.com/foomo/gokazi/releases/download/v0.1.5/gokazi_0.1.5_darwin_amd64.tar.gz"
+      sha256 "d2ef9708f040e075ae18259fdf0a314444c219be9b7f20df3b97d39e18eb0907"
 
       def install
         bin.install "gokazi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/gokazi/releases/download/v0.1.4/gokazi_0.1.4_darwin_arm64.tar.gz"
-      sha256 "677bac2bb7eddaa6d56b7c11a0aa9dc26739c40ee9a902ede49239e68ad2d5a7"
+      url "https://github.com/foomo/gokazi/releases/download/v0.1.5/gokazi_0.1.5_darwin_arm64.tar.gz"
+      sha256 "9a1fceb4ff8565ca6cd3728e7fdcdd8b3057e003f11b1654e49fae7a599cba6a"
 
       def install
         bin.install "gokazi"
@@ -29,8 +29,8 @@ class Gokazi < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/gokazi/releases/download/v0.1.4/gokazi_0.1.4_linux_amd64.tar.gz"
-        sha256 "243519423e83fed584cd0155c07d882f770e0f9dba3c0c66de8facc7870be2e8"
+        url "https://github.com/foomo/gokazi/releases/download/v0.1.5/gokazi_0.1.5_linux_amd64.tar.gz"
+        sha256 "f0425a033b9e2f39af98c2f6cfdc60b118fd23a563bb796f579230836eb4e8be"
 
         def install
           bin.install "gokazi"
@@ -39,8 +39,8 @@ class Gokazi < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/gokazi/releases/download/v0.1.4/gokazi_0.1.4_linux_arm64.tar.gz"
-        sha256 "4fe97a5218e5978b2660e616346c21539d797ed2a022e70582b3b430b70c8ae0"
+        url "https://github.com/foomo/gokazi/releases/download/v0.1.5/gokazi_0.1.5_linux_arm64.tar.gz"
+        sha256 "da344f3fbf5403cab3ffb1c089f24772d9536ef5d23599a932491f316d4b475a"
 
         def install
           bin.install "gokazi"
