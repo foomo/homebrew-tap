@@ -5,20 +5,20 @@
 class Squadron < Formula
   desc "CLI utility manage infrastructure as code with helm"
   homepage "https://github.com/foomo/squadron"
-  version "2.9.0"
+  version "2.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/squadron/releases/download/v2.9.0/squadron_2.9.0_darwin_amd64.tar.gz"
-      sha256 "e1abc530142a3238b9998240870fcd817c4f91accdafe3249d1f76bef50ffec1"
+      url "https://github.com/foomo/squadron/releases/download/v2.10.0/squadron_2.10.0_darwin_amd64.tar.gz"
+      sha256 "9644f58f50e7aa7f35715cabbc0ee305f6c3dd74690c8cd55eac077d60303c1e"
 
       def install
         bin.install "squadron"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/squadron/releases/download/v2.9.0/squadron_2.9.0_darwin_arm64.tar.gz"
-      sha256 "89d69f8ec8b716777139dfc4c7797bdb1bd7bf08eee27095542a310905416497"
+      url "https://github.com/foomo/squadron/releases/download/v2.10.0/squadron_2.10.0_darwin_arm64.tar.gz"
+      sha256 "c4ca2fb8dda6e9b4ebe3645964370473510cacd53ffccfafe3ed9904758b39ef"
 
       def install
         bin.install "squadron"
@@ -28,15 +28,15 @@ class Squadron < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/squadron/releases/download/v2.9.0/squadron_2.9.0_linux_amd64.tar.gz"
-      sha256 "bc764785c93ed121c68ede4e1fc1ce242075ce3218840ff391a577ad635dd87f"
+      url "https://github.com/foomo/squadron/releases/download/v2.10.0/squadron_2.10.0_linux_amd64.tar.gz"
+      sha256 "49f3d48c8f990066a6e75b8320b506420b3b387b59bb02a7e7d965d811636399"
       def install
         bin.install "squadron"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/squadron/releases/download/v2.9.0/squadron_2.9.0_linux_arm64.tar.gz"
-      sha256 "4472eb97cf0b7262e531faa8ec17bc8bfceb4f4e1eac239b716f450fde222680"
+      url "https://github.com/foomo/squadron/releases/download/v2.10.0/squadron_2.10.0_linux_arm64.tar.gz"
+      sha256 "80a2d40d4e2ae2022c36137322c3fe587cdf3689c924b0fc3559e4e3b277680a"
       def install
         bin.install "squadron"
       end
