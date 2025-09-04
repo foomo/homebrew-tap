@@ -10,7 +10,7 @@ class Squadron < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/foomo/squadron/releases/download/v20.10.4/squadron_20.10.4_darwin_amd64.tar.gz"
-      sha256 "de4229bc022a076c62fd4c9a75d99c035419462132e2e421f3cbd9045e71033e"
+      sha256 "8091ddb59a685b5be7145e29a20b3c0cb62749d7009b114e9b5b0f601c6ec861"
 
       def install
         bin.install "squadron"
@@ -18,7 +18,7 @@ class Squadron < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/foomo/squadron/releases/download/v20.10.4/squadron_20.10.4_darwin_arm64.tar.gz"
-      sha256 "315bf4be606e5edac5317dc3c0929edfe2485e56c4f99adadaf19a08b6c1b64f"
+      sha256 "12a28780980049e7686c110bbc3d478180b382644f9837c388e740a29a522fe8"
 
       def install
         bin.install "squadron"
@@ -27,16 +27,16 @@ class Squadron < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/foomo/squadron/releases/download/v20.10.4/squadron_20.10.4_linux_amd64.tar.gz"
-      sha256 "78a32be63d04406c0dc86103ad41d7112af9a194ea04516abc316af0156809be"
+      sha256 "810635861536748c9aa3177bfc819b9e2d43c29aeaf361c64985c0ce941ba5e4"
       def install
         bin.install "squadron"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/foomo/squadron/releases/download/v20.10.4/squadron_20.10.4_linux_arm64.tar.gz"
-      sha256 "843353f7aba3aef129b8eae4ce3f7815d2415794dfce1199f179c7e6a89094ae"
+      sha256 "66650476f4e7c6a2ca325ff3c5acb03221c5b29003a1b7f536edac33dc1313b5"
       def install
         bin.install "squadron"
       end
