@@ -5,20 +5,20 @@
 class Gotsrpc < Formula
   desc "CLI utility to generate go and typescript RPC calls easily"
   homepage "https://github.com/foomo/gotsrpc"
-  version "2.10.0"
+  version "2.11.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.10.0/gotsrpc_2.10.0_darwin_amd64.tar.gz"
-      sha256 "a735e0451273f730072887ca6653ee180b3f1b48f9639c673bbcac2b982f8123"
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.11.0/gotsrpc_2.11.0_darwin_amd64.tar.gz"
+      sha256 "ec971510796b99f8fa223ce8ce4b26262450122ebf485a442aa979196914fc4d"
 
       def install
         bin.install "gotsrpc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.10.0/gotsrpc_2.10.0_darwin_arm64.tar.gz"
-      sha256 "5b3d369318f172989399a280b3457a21f5c4d7fac016d96bfca00c3af732b579"
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.11.0/gotsrpc_2.11.0_darwin_arm64.tar.gz"
+      sha256 "ba5dad74e5456fb08c381687ae44072677f05381779004ee4f84e19732e63800"
 
       def install
         bin.install "gotsrpc"
@@ -27,16 +27,16 @@ class Gotsrpc < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.10.0/gotsrpc_2.10.0_linux_amd64.tar.gz"
-      sha256 "370ba1cc072239f3fa145b8cc00b836d885588bc8c23a5e92586485d1d54ffdb"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.11.0/gotsrpc_2.11.0_linux_amd64.tar.gz"
+      sha256 "ea04b5279e9aff0ff19518e28d2597470243d517e59f2119db76a2a0f7102e2c"
       def install
         bin.install "gotsrpc"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.10.0/gotsrpc_2.10.0_linux_arm64.tar.gz"
-      sha256 "429297fccf0c5bbbd100d74a4dca6ea5e6fa1fdbe5eb8fb829bb9f418f8c0704"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.11.0/gotsrpc_2.11.0_linux_arm64.tar.gz"
+      sha256 "42f18b3701bc4e98bdd94f39ab446757dbd9c4f516cbb92e1e941cf967fc6131"
       def install
         bin.install "gotsrpc"
       end
@@ -45,7 +45,7 @@ class Gotsrpc < Formula
 
   def caveats
     <<~EOS
-      gotsrpc gotsrpc.yml
+      gotsrpc
     EOS
   end
 end
