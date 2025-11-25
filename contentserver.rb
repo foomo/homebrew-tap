@@ -5,20 +5,20 @@
 class Contentserver < Formula
   desc "Serves content tree structures very quickly"
   homepage "https://github.com/foomo/contentserver"
-  version "1.14.0"
+  version "1.15.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/contentserver/releases/download/v1.14.0/contentserver_1.14.0_darwin_amd64.tar.gz"
-      sha256 "98008edc91fa506096b94796e526c43cd0aea9de7a09afd7a90658b2acd08fd1"
+      url "https://github.com/foomo/contentserver/releases/download/v1.15.0/contentserver_1.15.0_darwin_amd64.tar.gz"
+      sha256 "e3afac2e289276a61ee04ecaeb4af736e3640604fafacf49604444ddb42f80ad"
 
       def install
         bin.install "contentserver"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/contentserver/releases/download/v1.14.0/contentserver_1.14.0_darwin_arm64.tar.gz"
-      sha256 "65d5dba6b00f9580da2e91d4e7ebeb2375e253732d85b729e659b3c3375c030e"
+      url "https://github.com/foomo/contentserver/releases/download/v1.15.0/contentserver_1.15.0_darwin_arm64.tar.gz"
+      sha256 "7e16a3e6b187a38b64a285dc9abfbf960cbff7a74e51700e5c5f0cfd2e20cda3"
 
       def install
         bin.install "contentserver"
@@ -28,15 +28,15 @@ class Contentserver < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/contentserver/releases/download/v1.14.0/contentserver_1.14.0_linux_amd64.tar.gz"
-      sha256 "0e0d3ea40e26007f1c5f36145d390f201b4aea27909a773ae152fea7acbebec3"
+      url "https://github.com/foomo/contentserver/releases/download/v1.15.0/contentserver_1.15.0_linux_amd64.tar.gz"
+      sha256 "36bca6c848691b296034b00367b79e6af801cfa7e3437689b58a010adc7eeef0"
       def install
         bin.install "contentserver"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/contentserver/releases/download/v1.14.0/contentserver_1.14.0_linux_arm64.tar.gz"
-      sha256 "8a246d591bd3428339f870bb773f31f578923c7751c9fa7cac13e623e8aba53a"
+      url "https://github.com/foomo/contentserver/releases/download/v1.15.0/contentserver_1.15.0_linux_arm64.tar.gz"
+      sha256 "a6119fcdadcb9e2f20ea36dab0c7b61b88cd023af14d2e98c2597237e6f6be47"
       def install
         bin.install "contentserver"
       end
