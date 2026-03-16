@@ -5,20 +5,20 @@
 class Gotsrpc < Formula
   desc "CLI utility to generate go and typescript RPC calls easily"
   homepage "https://github.com/foomo/gotsrpc"
-  version "2.14.0-rc.1"
+  version "2.14.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.14.0-rc.1/gotsrpc_2.14.0-rc.1_darwin_amd64.tar.gz"
-      sha256 "7b684b24c43a83a75b0575ebd3cdad7af2ccd52d88c75f4e505237805da0a2b0"
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.14.0/gotsrpc_2.14.0_darwin_amd64.tar.gz"
+      sha256 "9ed536719de780096454c3fc82e5db92fb15ba9d5ec30e1ecc6e5aa050e88563"
 
       define_method(:install) do
         bin.install "gotsrpc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.14.0-rc.1/gotsrpc_2.14.0-rc.1_darwin_arm64.tar.gz"
-      sha256 "b17a721cca4b4025348414d2eb2b3d6a162b788ff2d61d5ef1b2d6a5185f54d0"
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.14.0/gotsrpc_2.14.0_darwin_arm64.tar.gz"
+      sha256 "4693ba10800d422f965130fdda743ee1707e6156724376af31630ac78f67d5b6"
 
       define_method(:install) do
         bin.install "gotsrpc"
@@ -28,15 +28,15 @@ class Gotsrpc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.14.0-rc.1/gotsrpc_2.14.0-rc.1_linux_amd64.tar.gz"
-      sha256 "1872b8dcaa43b263fba03c2da03ffdbb8d43a4e9147bb2fa0bac8b2508e654e3"
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.14.0/gotsrpc_2.14.0_linux_amd64.tar.gz"
+      sha256 "d482256a06f8c4bcc17b3c5e68e671691b6f5d8db6db07a9d524840b40c3e2a4"
       define_method(:install) do
         bin.install "gotsrpc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gotsrpc/releases/download/v2.14.0-rc.1/gotsrpc_2.14.0-rc.1_linux_arm64.tar.gz"
-      sha256 "95ebfec2db30f9992427fbc9c87f9747906332c9050fd00f49dce559fdc45175"
+      url "https://github.com/foomo/gotsrpc/releases/download/v2.14.0/gotsrpc_2.14.0_linux_arm64.tar.gz"
+      sha256 "6a6adfcc4d91a2268b2dd71f3d3b33371326796ea26861bcf3b81355fcfdcc75"
       define_method(:install) do
         bin.install "gotsrpc"
       end
