@@ -5,22 +5,22 @@
 class Posh < Formula
   desc "Project Oriented SHELL"
   homepage "https://github.com/foomo/posh"
-  version "0.15.0"
+  version "0.16.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.15.0/posh_0.15.0_darwin_amd64.tar.gz"
-      sha256 "eb1258f475f320d475c54e2eba66ef98b0d2109e245e8f53eb9304df693dafef"
+      url "https://github.com/foomo/posh/releases/download/v0.16.0/posh_0.16.0_darwin_amd64.tar.gz"
+      sha256 "30f7553075c208ebcbe9f2814df1b8efc54a21669b12ac421dfff8f1c0b30b9a"
 
-      def install
+      define_method(:install) do
         bin.install "posh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/posh/releases/download/v0.15.0/posh_0.15.0_darwin_arm64.tar.gz"
-      sha256 "b2b71142a0c25e086bb2000ae563ae8183497c264ccff9519ed684b52c3b99c1"
+      url "https://github.com/foomo/posh/releases/download/v0.16.0/posh_0.16.0_darwin_arm64.tar.gz"
+      sha256 "406bd72fec9502a6273cfe5d26a28f392c56c02442a42db18baa4eac6fe62d56"
 
-      def install
+      define_method(:install) do
         bin.install "posh"
       end
     end
@@ -28,16 +28,16 @@ class Posh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/posh/releases/download/v0.15.0/posh_0.15.0_linux_amd64.tar.gz"
-      sha256 "2a142e07878c345fbdcf55962a1aea52db885180b3f691874288fe82f128ba95"
-      def install
+      url "https://github.com/foomo/posh/releases/download/v0.16.0/posh_0.16.0_linux_amd64.tar.gz"
+      sha256 "b6a2caec3e250057e8bccc760775354aa02edc4d7e6319bf975ef814b4f83a1f"
+      define_method(:install) do
         bin.install "posh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/posh/releases/download/v0.15.0/posh_0.15.0_linux_arm64.tar.gz"
-      sha256 "2a623da30d4d16c0ecec45cb6f4d00293b18cf9e49809d5d38a5874d42895089"
-      def install
+      url "https://github.com/foomo/posh/releases/download/v0.16.0/posh_0.16.0_linux_arm64.tar.gz"
+      sha256 "fae865419faa83743c9bdb4a50f0b65d8641172a53b136febc6b871208de91e3"
+      define_method(:install) do
         bin.install "posh"
       end
     end
