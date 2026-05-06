@@ -5,20 +5,20 @@
 class Obacht < Formula
   desc "Security configuration scanner for developer environments"
   homepage "https://github.com/foomo/obacht"
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/obacht/releases/download/v0.3.0/obacht_0.3.0_darwin_amd64.tar.gz"
-      sha256 "32c9c3bb82095bddecf982bbeabf330099a8cd0ae169ce8cb511fce116feeb88"
+      url "https://github.com/foomo/obacht/releases/download/v0.4.0/obacht_0.4.0_darwin_amd64.tar.gz"
+      sha256 "69d2d465cbc808050d1a5026d8f930b0176a938101723059fcb8279f5f5fd2d9"
 
       define_method(:install) do
         bin.install "obacht"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/obacht/releases/download/v0.3.0/obacht_0.3.0_darwin_arm64.tar.gz"
-      sha256 "4a11c88b573b2aa9ebf8cd9aaefbb5396ded0b6933f4d3be8accceec74ac6aee"
+      url "https://github.com/foomo/obacht/releases/download/v0.4.0/obacht_0.4.0_darwin_arm64.tar.gz"
+      sha256 "c8ae2e4425e2969779e92cda2811dc2a82214c9ac1b8ab6f56ef35631084f54a"
 
       define_method(:install) do
         bin.install "obacht"
@@ -28,15 +28,15 @@ class Obacht < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/obacht/releases/download/v0.3.0/obacht_0.3.0_linux_amd64.tar.gz"
-      sha256 "168cc28d4c5497de6d6251b8c0805f04d984ad827329732bdb0a46061b67a620"
+      url "https://github.com/foomo/obacht/releases/download/v0.4.0/obacht_0.4.0_linux_amd64.tar.gz"
+      sha256 "709637799c864839d3644dcdc5fd19859a177013620209a2e2e7ccf838b845a0"
       define_method(:install) do
         bin.install "obacht"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/obacht/releases/download/v0.3.0/obacht_0.3.0_linux_arm64.tar.gz"
-      sha256 "f7619796b47d4b1b7dfda64324b5811c43922d3f8766ee8d3c59fcf9a50cfe82"
+      url "https://github.com/foomo/obacht/releases/download/v0.4.0/obacht_0.4.0_linux_arm64.tar.gz"
+      sha256 "7c4d858de79b903d7bbd8a99ac80c09fb1d8eff32809bcf06256c4870c57cf49"
       define_method(:install) do
         bin.install "obacht"
       end
