@@ -5,20 +5,20 @@
 class Posh < Formula
   desc "Project Oriented SHELL"
   homepage "https://github.com/foomo/posh"
-  version "0.16.0"
+  version "0.17.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/posh/releases/download/v0.16.0/posh_0.16.0_darwin_amd64.tar.gz"
-      sha256 "30f7553075c208ebcbe9f2814df1b8efc54a21669b12ac421dfff8f1c0b30b9a"
+      url "https://github.com/foomo/posh/releases/download/v0.17.0/posh_0.17.0_darwin_amd64.tar.gz"
+      sha256 "49d13c456d4b64c91c868535cfb2a964d1e779b8a5f2f3a7fa0403afe4fe2331"
 
       define_method(:install) do
         bin.install "posh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/posh/releases/download/v0.16.0/posh_0.16.0_darwin_arm64.tar.gz"
-      sha256 "406bd72fec9502a6273cfe5d26a28f392c56c02442a42db18baa4eac6fe62d56"
+      url "https://github.com/foomo/posh/releases/download/v0.17.0/posh_0.17.0_darwin_arm64.tar.gz"
+      sha256 "a3799d05c76b8b55c97ebbbf51f514897c7ab9825aaa1ff67725bd6f7443683a"
 
       define_method(:install) do
         bin.install "posh"
@@ -28,15 +28,15 @@ class Posh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/posh/releases/download/v0.16.0/posh_0.16.0_linux_amd64.tar.gz"
-      sha256 "b6a2caec3e250057e8bccc760775354aa02edc4d7e6319bf975ef814b4f83a1f"
+      url "https://github.com/foomo/posh/releases/download/v0.17.0/posh_0.17.0_linux_amd64.tar.gz"
+      sha256 "738a07054696a4fc58c18a645f03d172ef2f983775ad06919e89a89d3dec6eca"
       define_method(:install) do
         bin.install "posh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/posh/releases/download/v0.16.0/posh_0.16.0_linux_arm64.tar.gz"
-      sha256 "fae865419faa83743c9bdb4a50f0b65d8641172a53b136febc6b871208de91e3"
+      url "https://github.com/foomo/posh/releases/download/v0.17.0/posh_0.17.0_linux_arm64.tar.gz"
+      sha256 "129e40b15ed61131a1bca11463eb1f25721d6f7ffc0b751ae38d78184a19aa6d"
       define_method(:install) do
         bin.install "posh"
       end
