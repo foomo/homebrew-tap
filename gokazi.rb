@@ -5,39 +5,39 @@
 class Gokazi < Formula
   desc "Simple daemonmless process manager"
   homepage "https://github.com/foomo/gokazi"
-  version "0.1.6"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/gokazi/releases/download/v0.1.6/gokazi_0.1.6_darwin_amd64.tar.gz"
-      sha256 "776e6384241614f48cd4ea19e72a8ff7911b173b1dbb0883e7b4d7c86200f2fe"
+      url "https://github.com/foomo/gokazi/releases/download/v0.2.0/gokazi_0.2.0_darwin_amd64.tar.gz"
+      sha256 "408b69dd1cdc647f683d041f7d0e2221d230ee06c5ab73bcad3f42001f6af356"
 
-      def install
+      define_method(:install) do
         bin.install "gokazi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/gokazi/releases/download/v0.1.6/gokazi_0.1.6_darwin_arm64.tar.gz"
-      sha256 "dd3b8a0f9cdb2c147d70f941121e2255374a431a3521c8b4f71824696c677bf7"
+      url "https://github.com/foomo/gokazi/releases/download/v0.2.0/gokazi_0.2.0_darwin_arm64.tar.gz"
+      sha256 "551dfa542953923d3027bb84835975720a6ae9d8a188da7525bc1328b4c682db"
 
-      def install
+      define_method(:install) do
         bin.install "gokazi"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gokazi/releases/download/v0.1.6/gokazi_0.1.6_linux_amd64.tar.gz"
-      sha256 "997177f43bbd3edd0380db86968034575a562a704d298a17d2945e6e17f5dd9a"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/gokazi/releases/download/v0.2.0/gokazi_0.2.0_linux_amd64.tar.gz"
+      sha256 "8ebc3e1a8c4b2c24eb0e3d042b4c53b873393f2b8ed809934a24f61fe05391bd"
+      define_method(:install) do
         bin.install "gokazi"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/gokazi/releases/download/v0.1.6/gokazi_0.1.6_linux_arm64.tar.gz"
-      sha256 "a2d9c8f4117cbdfb08874955c9500d5ecda2452c187c6dd7b2605af154e3bf3b"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/gokazi/releases/download/v0.2.0/gokazi_0.2.0_linux_arm64.tar.gz"
+      sha256 "dc097275c9fe78de911d9b043b2809ea8745fec59815eca67c4da74172c46719"
+      define_method(:install) do
         bin.install "gokazi"
       end
     end
