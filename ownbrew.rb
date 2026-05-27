@@ -5,46 +5,40 @@
 class Ownbrew < Formula
   desc "Your local project package manager"
   homepage "https://github.com/foomo/ownbrew"
-  version "0.2.3"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/ownbrew/releases/download/v0.2.3/ownbrew_0.2.3_darwin_amd64.tar.gz"
-      sha256 "7af8d0edcaaa23eddc3add5b0f2a8cc3b0c0768aede38a4ead2b1611fe9bb91b"
+      url "https://github.com/foomo/ownbrew/releases/download/v0.3.0/ownbrew_0.3.0_darwin_amd64.tar.gz"
+      sha256 "2db90221e75c1f56c39fe4b0b92cc7af737e9cbe22cf725f2fc12e1d6c74bd4a"
 
-      def install
+      define_method(:install) do
         bin.install "ownbrew"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/ownbrew/releases/download/v0.2.3/ownbrew_0.2.3_darwin_arm64.tar.gz"
-      sha256 "2172072e5c073365c95c57a9fd57f035f8d7df3dc52dd9c18573517096a81be3"
+      url "https://github.com/foomo/ownbrew/releases/download/v0.3.0/ownbrew_0.3.0_darwin_arm64.tar.gz"
+      sha256 "5f147bf793d694e8fe43f606f31e981dce05fc1740e0297e4527e6e47dd41505"
 
-      def install
+      define_method(:install) do
         bin.install "ownbrew"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/ownbrew/releases/download/v0.2.3/ownbrew_0.2.3_linux_amd64.tar.gz"
-        sha256 "717703357e25f8b3add6e484649defdea9f8cb3f5b49ee4690c4d35b30b755e4"
-
-        def install
-          bin.install "ownbrew"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/ownbrew/releases/download/v0.3.0/ownbrew_0.3.0_linux_amd64.tar.gz"
+      sha256 "36e2c6adbf7a8e701249aa9e93b86ca78c2dc46f4e94ff76d660ab50030bdbd1"
+      define_method(:install) do
+        bin.install "ownbrew"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/foomo/ownbrew/releases/download/v0.2.3/ownbrew_0.2.3_linux_arm64.tar.gz"
-        sha256 "c84681cf592705934cbbf21b8ff179effc8f7c23722e20bace648e79f8e5ef9d"
-
-        def install
-          bin.install "ownbrew"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/foomo/ownbrew/releases/download/v0.3.0/ownbrew_0.3.0_linux_arm64.tar.gz"
+      sha256 "5632195649e79628825b49f582e3068753dc823be6e625607dbd6b0868b9f2ec"
+      define_method(:install) do
+        bin.install "ownbrew"
       end
     end
   end
@@ -53,5 +47,9 @@ class Ownbrew < Formula
     <<~EOS
       ownbrew --help
     EOS
+  end
+
+  test do
+    system "#{bin}/ownbrew version"
   end
 end
