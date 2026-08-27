@@ -13,7 +13,7 @@ cask "dockprox-menubar" do
   desc "Menu bar app for dockprox, an inverse HTTP(S) proxy with SOCKS5 support"
   homepage "https://github.com/foomo/dockprox"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "dockprox.app"
 
