@@ -4,9 +4,9 @@
 cask "dockprox-menubar" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.7.0"
-  sha256 arm:   "3c1d927a758e9297ac49f016713ed43c25629973cc44bd99387f5cda3ab33c27",
-          intel: "43095a321be5cc1383a3e9fb33d6e2560297dcdc16ba372a7bc038de96024cac"
+  version "0.8.0"
+  sha256 arm:   "f1ffae9ab2e51dbe3317f6e1a94b2efbb5646765e32245552e3af83c6b6ec99f",
+          intel: "750310cff63ff11510c3912ac5e62457ee78564d9bfcf064e1da8a3365946377"
 
   url "https://github.com/foomo/dockprox/releases/download/v#{version}/dockprox-menubar_#{version}_darwin_#{arch}.zip"
   name "dockprox"
