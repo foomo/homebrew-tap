@@ -5,20 +5,20 @@
 class Contentfulcommander < Formula
   desc "A toolbox of non-trivial Contentful interactions"
   homepage "https://github.com/foomo/contentfulcommander"
-  version "0.7.4"
+  version "0.7.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/contentfulcommander/releases/download/v0.7.4/contentfulcommander_0.7.4_darwin_amd64.tar.gz"
-      sha256 "5be655c93515be8de947e24db865f49ec117c8774b7c0fe2dca090c04758b2e1"
+      url "https://github.com/foomo/contentfulcommander/releases/download/v0.7.5/contentfulcommander_0.7.5_darwin_amd64.tar.gz"
+      sha256 "f4f78a5658709e9353a91185d1613e791f50979f0312e61d5ae94c233ce4a4a0"
 
       define_method(:install) do
         bin.install "contentfulcommander"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/contentfulcommander/releases/download/v0.7.4/contentfulcommander_0.7.4_darwin_arm64.tar.gz"
-      sha256 "67a506a64a3c71e09fcb0ca72aef674a6c304e73c6acd172a61857a79e8b3d54"
+      url "https://github.com/foomo/contentfulcommander/releases/download/v0.7.5/contentfulcommander_0.7.5_darwin_arm64.tar.gz"
+      sha256 "4c9c1539dc3d3ea5f265d4c6ca1280fb660c639ed5533f041c3710fbead5270a"
 
       define_method(:install) do
         bin.install "contentfulcommander"
@@ -28,15 +28,15 @@ class Contentfulcommander < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/contentfulcommander/releases/download/v0.7.4/contentfulcommander_0.7.4_linux_amd64.tar.gz"
-      sha256 "47953c654fe0c03a7b49fc8e424ba052587c46d1ace913157d9dafa6c31e6efe"
+      url "https://github.com/foomo/contentfulcommander/releases/download/v0.7.5/contentfulcommander_0.7.5_linux_amd64.tar.gz"
+      sha256 "38cb7b4c7a6982e7f91787c46e8d3b838c37c99eaa5a7671c12f720f77c199fc"
       define_method(:install) do
         bin.install "contentfulcommander"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/contentfulcommander/releases/download/v0.7.4/contentfulcommander_0.7.4_linux_arm64.tar.gz"
-      sha256 "52dfd1d10ad40e4dd5976b2d4fadc54b6da0b50e62c7f417f888af5463ab16d6"
+      url "https://github.com/foomo/contentfulcommander/releases/download/v0.7.5/contentfulcommander_0.7.5_linux_arm64.tar.gz"
+      sha256 "2c74633175959382aa6a62a657dd581d62d90a846028eb5bf1309c3bed72a839"
       define_method(:install) do
         bin.install "contentfulcommander"
       end
