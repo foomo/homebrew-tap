@@ -5,20 +5,20 @@
 class Dockprox < Formula
   desc "Security configuration scanner for developer environments"
   homepage "https://github.com/foomo/dockprox"
-  version "0.10.1"
+  version "0.10.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/foomo/dockprox/releases/download/v0.10.1/dockprox_0.10.1_darwin_amd64.tar.gz"
-      sha256 "9ab96ddc086e7929061282a798e3e3bc615d71e5823072fa0adc392667e3fa9f"
+      url "https://github.com/foomo/dockprox/releases/download/v0.10.2/dockprox_0.10.2_darwin_amd64.tar.gz"
+      sha256 "711594842398df65837b725b616f39e3c0b4095d9db01e4964166db8b4a376c8"
 
       define_method(:install) do
         bin.install "dockprox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/foomo/dockprox/releases/download/v0.10.1/dockprox_0.10.1_darwin_arm64.tar.gz"
-      sha256 "ceb22145c856d76860b38985f379b5af30a8c52cd82eca64bca89ecb80248f3a"
+      url "https://github.com/foomo/dockprox/releases/download/v0.10.2/dockprox_0.10.2_darwin_arm64.tar.gz"
+      sha256 "163a8d6838bf99b1b8b4e6bd1c8874a5a58cd062849dba12754a24b284f78cfc"
 
       define_method(:install) do
         bin.install "dockprox"
@@ -28,15 +28,15 @@ class Dockprox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/dockprox/releases/download/v0.10.1/dockprox_0.10.1_linux_amd64.tar.gz"
-      sha256 "10fb0e9b259d94ea263eb653695ab223d54734feaba8b1057ccb1fcd52acdad8"
+      url "https://github.com/foomo/dockprox/releases/download/v0.10.2/dockprox_0.10.2_linux_amd64.tar.gz"
+      sha256 "84da5ffbaa62a42cb9b46ac2a6a3b3feb49e4ee459707f78718df1db9509d9c1"
       define_method(:install) do
         bin.install "dockprox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/foomo/dockprox/releases/download/v0.10.1/dockprox_0.10.1_linux_arm64.tar.gz"
-      sha256 "44bbc5194df04222c662fa796bc82835bf44f88ac91646a0fecf9cd7a2b1294e"
+      url "https://github.com/foomo/dockprox/releases/download/v0.10.2/dockprox_0.10.2_linux_arm64.tar.gz"
+      sha256 "aed54881a1457bfd9e533b40dcf0db8a2a9116c422bb79b5f598ed4ce41dc21c"
       define_method(:install) do
         bin.install "dockprox"
       end
